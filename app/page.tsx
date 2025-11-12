@@ -1,6 +1,6 @@
 import EventCard from "@/components/EventCard"
 import ExploreBtn from "@/components/ExploreBtn"
-import { events } from "@/lib/constants"
+import { DevEvent, devEvents } from "@/lib/constants"
 
 const page = () => {
   return (
@@ -14,9 +14,7 @@ const page = () => {
         <h3>Featured Events</h3>
 
         <ul className="events">
-          {events.map(e => (
-            <EventCard key={e.id} { ...e } />
-          ))}
+          {devEvents.map((e: DevEvent) => <EventCard key={e.id} { ...e } />)}
         </ul>
       </div>
     </section>

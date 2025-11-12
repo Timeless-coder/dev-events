@@ -1,9 +1,9 @@
 // lib/constants.ts
 // List of upcoming or popular developer events
 
-export type Event = {
+export type DevEvent = {
   id: string;
-  name: string;
+  title: string;
   date: string;
   time: string;
   location: string;
@@ -12,10 +12,10 @@ export type Event = {
   url: string;
 };
 
-export const events: Event[] = [
+export const devEvents: DevEvent[] = [
   {
     id: 'jsconf2025',
-    name: 'JSConf EU 2025',
+  title: 'JSConf EU 2025',
     date: '2025-12-05',
     time: '09:00 - 18:00',
     location: 'Berlin, Germany',
@@ -25,7 +25,7 @@ export const events: Event[] = [
   },
   {
     id: 'reactsummit',
-    name: 'React Summit 2025',
+  title: 'React Summit 2025',
     date: '2025-11-20',
     time: '10:00 - 17:00',
     location: 'Amsterdam, Netherlands',
@@ -35,7 +35,7 @@ export const events: Event[] = [
   },
   {
     id: 'hacknyc',
-    name: 'HackNYC 2025',
+  title: 'HackNYC 2025',
     date: '2025-12-12',
     time: '08:00 - 20:00',
     location: 'New York, USA',
@@ -45,7 +45,7 @@ export const events: Event[] = [
   },
   {
     id: 'pyconasia',
-    name: 'PyCon Asia 2026',
+  title: 'PyCon Asia 2026',
     date: '2026-01-15',
     time: '09:30 - 18:30',
     location: 'Singapore',
@@ -55,7 +55,7 @@ export const events: Event[] = [
   },
   {
     id: 'devfest',
-    name: 'Google DevFest 2025',
+  title: 'Google DevFest 2025',
     date: '2025-11-25',
     time: '11:00 - 19:00',
     location: 'London, UK',
@@ -65,7 +65,7 @@ export const events: Event[] = [
   },
   {
     id: 'fossasia',
-    name: 'FOSSASIA Summit 2026',
+  title: 'FOSSASIA Summit 2026',
     date: '2026-02-20',
     time: '10:00 - 18:00',
     location: 'Singapore',
