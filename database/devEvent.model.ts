@@ -10,6 +10,7 @@ export interface IDevEvent extends Document {
   image: string
   venue: string
   location: string
+  url: string
   date: string
   time: string
   mode: string
@@ -37,8 +38,9 @@ const DevEventSchema = new Schema<IDevEvent>({
     trim: true,
     maxlength: [500, 'Overview cannot exceed 500 characters'],
   },
-  image: { type: String, required: [true, 'Image is required'], trim: true },
+  image: { type: String, trim: true },
   venue: { type: String, required: [true, 'Venue is required'], trim: true },
+  url: { type: String, required: [true, 'URL is required'], trim: true },
   location: { type: String, required: [true, 'Location is required'], trim: true },
   date: { type: String, required: [true, 'Date is required'] },
   time: { type: String, required: [true, 'Time is required'] },
