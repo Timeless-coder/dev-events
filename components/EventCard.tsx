@@ -1,41 +1,37 @@
+import { IDevEvent } from "@/database/devEvent.model"
 import Image from "next/image"
 import Link from "next/link"
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+
 type Props = {
-	id: string;
-	title: string;
-	date: string;
-	location: string;
-	description: string;
-	image: string;
-	url: string;
-	time: string;
+	devEvent: IDevEvent
 }
 
-const EventCard = ({ id, title, date, location, description, image, url, time }: Props) => {
-		return (
-			<Link href={url} id="event-card">
-				<Image src={image} alt={title} width={410} height={300} className="poster" />
+const EventCard = ({devEvent}: Props) => {
+	return (
+		<Link href={`${BASE_URL}/events/${devEvent.slug}`} id="event-card">
+			<Image src={devEvent.image} alt={devEvent.title} width={410} height={300} className="poster" />
 
-				<div style={{ display: "flex", flexDirection: "row", gap: 2 }}>
-					<Image src="/icons/pin.svg" alt="location" width={14} height={14} />
-					<p>{location}</p>
+			<div style={{ display: "flex", flexDirection: "row", gap: 2 }}>
+				<Image src="/icons/pin.svg" alt="location" width={14} height={14} />
+				<p>{devEvent.location}</p>
+			</div>
+
+			<p className="title">{devEvent.title}</p>
+
+			<div className="datetime">
+				<div>
+					<Image src="/icons/calendar.svg" alt="date" width={14} height={14} />
+					<p>{devEvent.date}</p>
 				</div>
-
-				<p className="title">{title}</p>
-
-				<div className="datetime">
-					<div>
-						<Image src="/icons/calendar.svg" alt="date" width={14} height={14} />
-						<p>{date}</p>
-					</div>
-					<div>
-						<Image src="/icons/clock.svg" alt="time" width={14} height={14} />
-						<p>{time}</p>
-					</div>
+				<div>
+					<Image src="/icons/clock.svg" alt="time" width={14} height={14} />
+					<p>{devEvent.time}</p>
 				</div>
-			</Link>
-		)
+			</div>
+		</Link>
+	)
 }
 
 export default EventCard

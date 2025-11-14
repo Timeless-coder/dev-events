@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk, Martian_Mono } from "next/font/google";
 import LightRays from "@/components/LightRays";
-import { PostHogProvider } from "./providers";
+// import { PostHogProvider } from "./providers";
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={`${schibsted.variable} ${martian.variable} min-h-screen antialiased`}>
-        <PostHogProvider>
+        {/* <PostHogProvider> */}
           <Navbar />
           <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
             <LightRays
@@ -47,7 +47,7 @@ export default function RootLayout({ children }: Props) {
           <main>
             {children}
           </main>
-        </PostHogProvider>
+        {/* </PostHogProvider> */}
       </body>
     </html>
   );
