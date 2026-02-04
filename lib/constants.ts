@@ -1,0 +1,53 @@
+// List of real upcoming or popular developer conferences, hackathons, or tech meetups
+// Image paths should match files in public/images
+
+export const events = [
+  {
+    title: "React Summit 2026",
+    image: "/images/event1.png",
+    slug: "react-summit-2026",
+    location: "Amsterdam, Netherlands",
+    date: "2026-06-10",
+    time: "09:00",
+  },
+  {
+    title: "JSConf EU 2026",
+    image: "/images/event2.png",
+    slug: "jsconf-eu-2026",
+    location: "Berlin, Germany",
+    date: "2026-07-15",
+    time: "10:00",
+  },
+  {
+    title: "HackMIT 2026",
+    image: "/images/event3.png",
+    slug: "hackmit-2026",
+    location: "Cambridge, MA, USA",
+    date: "2026-09-19",
+    time: "08:00",
+  },
+  {
+    title: "PyCon US 2026",
+    image: "/images/event4.png",
+    slug: "pycon-us-2026",
+    location: "Pittsburgh, PA, USA",
+    date: "2026-05-01",
+    time: "09:00",
+  },
+  {
+    title: "ETHGlobal New York 2026",
+    image: "/images/event5.png",
+    slug: "ethglobal-ny-2026",
+    location: "New York, NY, USA",
+    date: "2026-08-23",
+    time: "09:00",
+  },
+  {
+    title: "Google I/O 2026",
+    image: "/images/event6.png",
+    slug: "google-io-2026",
+    location: "Mountain View, CA, USA",
+    date: "2026-05-14",
+    time: "10:00",
+  },
+];
