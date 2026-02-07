@@ -1,6 +1,3 @@
-// List of real upcoming or popular developer conferences, hackathons, or tech meetups
-// Image paths should match files in public/images
-
 export const events = [
   {
     title: "React Summit 2026",
